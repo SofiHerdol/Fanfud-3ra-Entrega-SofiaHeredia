@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    background-image: url(../media/fanfud/background.png);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+    background-color: #0D5C63;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFA;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.mobile-fanfud-icon {
+    width: 50%;
+    height: auto;
+    margin-right: 100%;
+}
+
+.footer-copyright {
+    background-color: #0D5C63;
+    color: #FFFFFA;
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* ⇩ ABSOLUTE STYLES ⇩ */
+
+    .fanfud-icon, .nav-content {
+        display: none;
+    }
+
+    .mobile-fanfud-bar {
+        display: block;
+        text-align: center;
+    }
+
+    .menu-dropdown {
+        display: block;
+        width: 40%;
+        height: auto;
+        margin-left: 50%;
+    }
+
+    .dropdown-menu {
+        width: 334%;
+        height: auto;
+    }
+    
+    ul.custom-dropdown {
+        background-color: #44A1A0;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    .dropdown-top-img, .dropdown-bottom-img {
+        width: 80%;
+    }
+
+    .dropdown-top-img {
+        margin-bottom: 5%;
+    }
+
+    .dropdown-bottom-img {
+        margin-top: 5%;
+    }
+
+    .footer-copyright p {
+        padding-top: 2%;
+    }
+
+    /* ⇧ ABSOLUTE STYLES ⇧ */
+
+    /* ⇩ INDEX STYLES ⇩ */
+
+    .custom-carousel {
+        margin: 2%;
+        border: 3px solid #FFFFFA;
+    }
+
+    .index-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .index-card {   
+        margin: 5%;
+        text-align: center;
+        background-color: #44A1A0;
+        color: #FFFFFA;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 80%;
+        height: auto;
+        border: 3px solid #FFFFFA;
+    }
+
+    .index-card h1 {
+        margin-top: 5%;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    .index-card p {
+        font-size: 1.4rem;
+        padding: 5%;
+    }
+
+    .index-reservation {
+        font-size: 1.8rem;
+        background: transparent;
+        text-transform: initial;
+        border-top: 2px solid #FFFFFA;
+        border-bottom: 2px solid #FFFFFA;
+        margin: 0rem 30% 1.5rem;
+        padding: 8px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        transition: background-color 0.5s, color 0.5s;
+        text-decoration: none;
+        color: #FFFFFA;
+    }
+
+    .index-reservation:hover {
+        background-color: #FFFFFA;
+        color: #44A1A0;
+    }
+
+    .index-card-top-decoration, .index-card-bottom-decoration {
+        width: 80%;
+        height: auto;
+    }
+
+    /* ⇧ INDEX STYLES ⇧ */
+
+    /* ⇩ MENU STYLES ⇩ */
+
+    .menu-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #FFFFFA;
+        font-family: 'Josefin Sans', sans-serif;
+        margin-top: 1rem;
+    }
+
+    .menu-title h1 {
+        padding-top: 2%;
+        font-size: 4rem;
+        font-weight: 300;
+    }
+
+    .menu-title img {
+        width: 45%;
+        height: auto;
+    }
+
+    .starter, .main, .accompaniments, .dessert, .drinks, .wines {
+        color: #FFFFFA;
+        font-family: 'Josefin Sans', sans-serif;
+        text-align: center;
+        border-top: 2px solid #FFFFFA;
+        margin: 1rem 10% 1rem;
+    }
+
+    .starter h2, .main h2, .accompaniments h2, .dessert h2, .drinks h2, .wines h2 {
+        margin-top: 10%;
+        margin-bottom: 8%;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    .starter h3, .main h3, .accompaniments h3, .dessert h3, .drinks h3, .wines h3 {
+        font-size: 2rem;
+    }
+
+    .menu-details {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    .menu-price {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+    }
+
+    .wines {
+        border-bottom: 2px solid #FFFFFA;
+    }
+
+    .starter ul, .main ul, .accompaniments ul, .dessert ul, .drinks ul, .wines ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .plates{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+    }
+
+    /* ⇧ MENU STYLES ⇧ */
+
+    /* ⇩ BRANCHES STYLES ⇩ */
+
+    .branches-title, .branches {
+        color: #FFFFFA;
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .branches-title h1 {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    .branches-title img {
+        width: 55%;
+    }
+
+    .branches-title-top-decoration {
+        margin-top: 1rem;
+    }
+
+    .branches-title-bottom-decoration {
+        margin-bottom: 1rem;
+    }
+
+    .branches {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .branches h2 {
+        font-size: 3.7rem;
+        font-weight: 300;
+        margin-top: 2%;
+    }
+
+    .branches p {
+        font-size: 2rem;
+
+    }
+
+    .branch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        background-color: #44a19f82;
+        width: 30rem;
+        height: 15rem;
+        border: 3px solid #FFFFFA;
+        border-bottom: 10px solid #44A1A0;
+    }
+
+
+
+    /* ⇧ BRANCHES STYLES ⇧ */
+
+    /* ⇩ OUR HISTORY STYLES ⇩ */
+
+    .our-history-title-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+    }
+
+    .our-history-title-card {
+        background-image: url(../media/our_history/minibulbs.png);
+        border: 3px solid #FFFFFA;
+        height: 15rem;
+        width: auto;
+    }
+
+    .our-history-title-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background: #0d5c6332;
+        color: #FFFFFA;
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+        backdrop-filter: blur(4px);
+    }
+
+    .our-history-title-body h1 {
+        font-size: 2.3rem;
+        font-weight: 300;
+    }
+
+    .our-history-img-container {
+        display: none;
+    }
+
+    .our-history-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .sentence img {
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .sentence {
+        color: #FFFFFA;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 300;
+        margin: 2rem;
+
+        border: 3px solid #FFFFFA;
+    }
+
+    .sentence p {
+        padding: 1rem;
+    }
+
+    .sentence1 {
+        background-image: url(../media/our_history/landscape.jpeg);
+    }
+
+    .sentence2 {
+        background-image: url(../media/our_history/ministaff.png);
+        background-size: 100%;
+    }
+
+    .sentence3 {
+        background-image: url(../media/our_history/inside_pic_one.jpg);
+    }
+
+    .sentence4 {
+        background-image: url(../media/our_history/inside_pic_two.jpg);
+    }
+    
+    .sentence5 {
+        background-image: url(../media/our_history/inside_pic_three.jpg);
+    }
+
+    .sentence1-body, .sentence2-body, .sentence3-body, .sentence4-body, .sentence5-body {
+        backdrop-filter: blur(3px);
+        background-color: #106f7732;
+    }
+
+    /* ⇧ OUR HISTORY STYLES ⇧ */
+
+    /* ⇩ RESERVATION STYLES ⇩ */
+
+    .reservation-container {
+        margin: 1.5rem;
+    }
+
+    .reservation-card {
+        background-color: #44a19f82;
+        border: 3px solid #FFFFFA;
+        text-align: center;
+        color: #FFFFFA;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 100%;
+        height: 100%;
+    }
+
+    .reservation-card h1 {
+        font-size: 3.5rem;
+        font-weight: 300;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .reservation-card label {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    .button {
+        width: 30% !important;
+        margin-bottom: 1rem;
+    }
+
+    .reservation-card input {
+        width: 65%;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .options {
+        font-size: 2rem;
+        display: flex;
+        font-weight: 300;
+    }
+    
+    .options span {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 1rem;
+    }
+    
+    .options input {
+        align-items: center;
+    }
+
+    .branch-selector {
+        font-size: 2rem;
+        padding: 0.2rem;
+        text-align: center;
+        margin: 1rem;
+    }
+
+
+
+
+
+    .reservation-card-top-decoration, .reservation-card-bottom-decoration {
+        width: 80%;
+    }
+
+    /* ⇧ RESERVATION STYLES ⇧ */
+
+}
