@@ -99,6 +99,7 @@ nav ul li a {
     .custom-carousel {
         margin: 2%;
         border: 3px solid #FFFFFA;
+        height: 100vh;
     }
 
     .index-container {
