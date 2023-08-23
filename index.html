@@ -15,18 +15,20 @@
     <header>
         <div>
             <nav>
-                <div class="fanfud-bar">
-                    <a href="index.html"><img src="media/fanfud/fanfud_vertical_logo.png" class="fanfud-icon" alt="logo"></a>
+                <div class="desktop-header">
+                    <div>
+                        <a href="index.html" class="fanfud-icon-link"><img src="media/fanfud/fanfud_vertical_logo.png" class="fanfud-icon" alt="logo"></a>
+                    </div>
+                    <div class="nav-content">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="pages/menu.html">Menú</a></li>
+                        <li><a href="pages/branches.html">Sucursales</a></li>
+                        <li><a href="pages/our_history.html">Nuestra Historia</a></li>
+                        <li><a href="pages/reservations.html">Reservaciones</a></li>
+                    </div>
                 </div>
                 <div class="mobile-fanfud-bar">
                     <a href="index.html"><img src="media/fanfud/fanfud_horizontal_logo.png" class="mobile-fanfud-icon" alt="logo"></a>
-                </div>
-                <div class="nav-content">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="pages/menu.html">Menú</a></li>
-                    <li><a href="pages/branches.html">Sucursales</a></li>
-                    <li><a href="pages/our_history.html">Nuestra Historia</a></li>
-                    <li><a href="pages/reservations.html">Reservaciones</a></li>
                 </div>
                 <li class="nav-item dropdown">
                     <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="media/fanfud/menu.png" alt="" class="menu-dropdown"></a>
@@ -52,34 +54,35 @@
                 <a href="pages/reservations.html" class="index-reservation">Reservar</a>
                 <img src="media/fanfud/bottom_decoration.png" alt="" class="index-card-bottom-decoration">
             </div>
+            <div id="carouselExampleIndicators" class="carousel slide custom-carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="media/reference_images/food1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="media/reference_images/food2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="media/reference_images/food3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </main>
-    <div id="carouselExampleIndicators" class="carousel slide custom-carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="media/reference_images/food1.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="media/reference_images/food2.png" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="media/reference_images/food3.jpg" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+    
     <footer>
         <div class="footer-copyright">
             <p>Todos los derechos reservados © Fänfud 2023</p>
