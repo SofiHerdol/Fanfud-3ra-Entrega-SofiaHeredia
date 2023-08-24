@@ -825,6 +825,7 @@ ul.custom-dropdown {
     .sentence1, .sentence2, .sentence3, .sentence4, .sentence5 {
         background-image: none;
         width: 50%;
+        margin: 3%;
     }
 
     .sentence1-body, .sentence2-body, .sentence3-body, .sentence4-body, .sentence5-body {
