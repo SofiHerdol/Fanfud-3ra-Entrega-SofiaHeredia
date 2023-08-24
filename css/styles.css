@@ -785,10 +785,6 @@ ul.custom-dropdown {
 
     /* ⇩ OUR HISTORY STYLES ⇩ */
 
-    .our-history-title-container {
-
-    }
-
     .our-history-title-card {
         width: 85%;
     }
@@ -809,10 +805,6 @@ ul.custom-dropdown {
         display: block;
         width: 50%;
         position: relative;
-    }
-
-    .our-history-img-container::before {
-
     }
 
     .our-history-img-container img {
