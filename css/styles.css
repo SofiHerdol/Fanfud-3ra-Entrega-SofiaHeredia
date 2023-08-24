@@ -274,8 +274,14 @@ ul.custom-dropdown {
         margin-top: 2%;
     }
 
+    .branches h3 {
+        font-size: 2.5rem;
+        color: #78CDD7;
+    }
+
     .branches p {
         font-size: 2rem;
+        font-weight: 300;
     }
 
     .branch {
