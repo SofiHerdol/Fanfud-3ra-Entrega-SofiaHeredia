@@ -459,6 +459,10 @@
         a {
             text-decoration: none;
             color: $tertiary-color;
+            transition: transform 0.5s;
+            &:hover {
+                transform: scale(0.9)
+            }
             .branch {
                 @include flex;
                 width: 30rem;
