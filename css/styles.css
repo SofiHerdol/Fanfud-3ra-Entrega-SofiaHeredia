@@ -768,14 +768,16 @@ main .branches {
   backdrop-filter: blur(4px);
 }
 .our-history-title-container .our-history-title-card .our-history-title-body h1 {
-  font-size: 2.3rem;
+  font-size: 3rem;
   font-weight: 300;
   padding-left: 1%;
   padding-right: 1%;
 }
 @media screen and (min-width: 700px) {
   .our-history-title-container .our-history-title-card .our-history-title-body h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -933,6 +935,7 @@ main .branches {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(5, auto);
+    margin-bottom: 3%;
   }
 }
 @media screen and (min-width: 300px) and (min-width: 1200px) {
@@ -998,14 +1001,30 @@ main .branches {
     padding: 1rem;
   }
 }
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence1 .sentence1-body p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence1 .sentence1-body .our-history-top-decoration {
+    width: 60%;
+  }
+}
 @media screen and (min-width: 300px) and (min-width: 1200px) {
   .our-history-container .sentence .sentence1 .sentence1-body .our-history-top-decoration {
-    width: 50%;
+    width: 55%;
+  }
+}
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence1 .sentence1-body .our-history-bottom-decoration {
+    width: 60%;
   }
 }
 @media screen and (min-width: 300px) and (min-width: 1200px) {
   .our-history-container .sentence .sentence1 .sentence1-body .our-history-bottom-decoration {
-    width: 50%;
+    width: 55%;
   }
 }
 @media screen and (min-width: 300px) {
@@ -1039,14 +1058,30 @@ main .branches {
     padding: 1rem;
   }
 }
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence2 .sentence2-body p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence2 .sentence2-body .our-history-top-decoration {
+    width: 60%;
+  }
+}
 @media screen and (min-width: 300px) and (min-width: 1200px) {
   .our-history-container .sentence .sentence2 .sentence2-body .our-history-top-decoration {
-    width: 50%;
+    width: 55%;
+  }
+}
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence2 .sentence2-body .our-history-bottom-decoration {
+    width: 60%;
   }
 }
 @media screen and (min-width: 300px) and (min-width: 1200px) {
   .our-history-container .sentence .sentence2 .sentence2-body .our-history-bottom-decoration {
-    width: 50%;
+    width: 55%;
   }
 }
 @media screen and (min-width: 300px) {
@@ -1079,14 +1114,30 @@ main .branches {
     padding: 1rem;
   }
 }
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence3 .sentence3-body p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence3 .sentence3-body .our-history-top-decoration {
+    width: 60%;
+  }
+}
 @media screen and (min-width: 300px) and (min-width: 1200px) {
   .our-history-container .sentence .sentence3 .sentence3-body .our-history-top-decoration {
-    width: 50%;
+    width: 55%;
+  }
+}
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence3 .sentence3-body .our-history-bottom-decoration {
+    width: 60%;
   }
 }
 @media screen and (min-width: 300px) and (min-width: 1200px) {
   .our-history-container .sentence .sentence3 .sentence3-body .our-history-bottom-decoration {
-    width: 50%;
+    width: 55%;
   }
 }
 @media screen and (min-width: 300px) {
@@ -1119,14 +1170,30 @@ main .branches {
     padding: 1rem;
   }
 }
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence4 .sentence4-body p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence4 .sentence4-body .our-history-top-decoration {
+    width: 60%;
+  }
+}
 @media screen and (min-width: 300px) and (min-width: 1200px) {
   .our-history-container .sentence .sentence4 .sentence4-body .our-history-top-decoration {
-    width: 50%;
+    width: 55%;
+  }
+}
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence4 .sentence4-body .our-history-bottom-decoration {
+    width: 60%;
   }
 }
 @media screen and (min-width: 300px) and (min-width: 1200px) {
   .our-history-container .sentence .sentence4 .sentence4-body .our-history-bottom-decoration {
-    width: 50%;
+    width: 55%;
   }
 }
 @media screen and (min-width: 300px) {
@@ -1159,14 +1226,30 @@ main .branches {
     padding: 1rem;
   }
 }
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence5 .sentence5-body p {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence5 .sentence5-body .our-history-top-decoration {
+    width: 60%;
+  }
+}
 @media screen and (min-width: 300px) and (min-width: 1200px) {
   .our-history-container .sentence .sentence5 .sentence5-body .our-history-top-decoration {
-    width: 50%;
+    width: 55%;
+  }
+}
+@media screen and (min-width: 300px) and (min-width: 700px) {
+  .our-history-container .sentence .sentence5 .sentence5-body .our-history-bottom-decoration {
+    width: 60%;
   }
 }
 @media screen and (min-width: 300px) and (min-width: 1200px) {
   .our-history-container .sentence .sentence5 .sentence5-body .our-history-bottom-decoration {
-    width: 50%;
+    width: 55%;
   }
 }
 .footer-copyright {
