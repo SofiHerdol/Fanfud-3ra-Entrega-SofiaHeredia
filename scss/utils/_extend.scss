@@ -1,0 +1,16 @@
+@import "../utils/variables";
+
+%plates {
+    @include font;
+    color: $tertiary-color;
+    text-align: center;
+    border-top: 2px solid $tertiary-color;
+    margin: 1rem 10% 1rem;
+}
+
+%titles {
+    margin-top: 10%;
+    margin-bottom: 8%;
+    font-size: 3rem;
+    font-weight: 300;
+}

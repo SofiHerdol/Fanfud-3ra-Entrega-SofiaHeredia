@@ -1,0 +1,46 @@
+@import "./variables";
+
+@mixin card ($width, $height){
+    width: $width;
+    height: $height;
+    color: $tertiary-color;
+    background-color: $secondary-color;
+    border: 3px solid $tertiary-color;
+    text-align: center;
+}
+
+@mixin flex {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin font {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+@mixin tablet {
+    @media screen and (min-width:700px) {
+        @content
+    }
+}
+
+@mixin titles-tablet {
+    font-size: 4rem;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+@mixin desktop {
+    @media screen and (min-width:1200px) {
+        @content
+    }
+}

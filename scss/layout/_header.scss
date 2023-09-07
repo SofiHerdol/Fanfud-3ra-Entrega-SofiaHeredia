@@ -1,0 +1,160 @@
+@import "../utils/variables";
+@import "../utils/mixin";
+
+
+@media screen and (min-width:100px) {
+
+    nav {
+        @include flex;
+        background-color: $primary-color;
+        list-style: none;
+        width: 100%;
+        padding: 1rem;
+        border-bottom: 3px solid $tertiary-color;
+
+        .mobile-fanfud-bar {
+            display: block;
+            text-align: center;
+            .mobile-fanfud-icon {
+                width: 50%;
+                height: auto;
+                margin-right: 100%;
+            }
+        }
+
+        ul {
+            li {
+                a {
+                    @include font;
+                    text-decoration: none;
+                    color: $tertiary-color;
+                }
+            }
+        }
+    }
+
+
+    .desktop-header {
+        .fanfud-icon, .nav-content {
+            display: none;
+        }
+    }
+
+
+    .dropdown-menu {
+        width: 334%;
+        height: auto;
+    }
+
+    ul.custom-dropdown {
+        background-color: $quarternary-color;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    .dropdown-top-img, .dropdown-bottom-img {
+        width: 80%;
+    }
+
+    .dropdown-top-img {
+        margin-bottom: 5%;
+    }
+
+    .dropdown-bottom-img {
+        margin-top: 5%;
+    }
+
+    .menu-dropdown {
+        display: block;
+        width: 40%;
+        height: auto;
+        margin-left: 50%;
+    }
+}
+
+@media screen and (min-width:700px) {
+    .fanfud-icon, .nav-content {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    nav {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+
+        .desktop-header {
+            @include flex;
+            flex-direction: column;
+
+            width: 100%;
+
+            .fanfud-icon {
+                display: flex;
+                margin-top: 0.5%;
+
+                img {
+                    width: 30%;
+                }
+
+                .fanfud-icon-link {
+                    @include flex;
+                }   
+            }
+
+            .nav-content {
+                @include flex;
+                width: 100%;
+
+                li {
+                    margin-left: 2%;
+                    margin-right: 2%;
+                    margin-top: 1%;
+                    margin-bottom: 0.5%;
+                    position: relative;
+                    font-size: 3rem;
+                    
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 0;
+                        margin: auto;
+                        position: absolute;
+                        background: transparent;
+                        height: 5rem;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        border: 3px solid $tertiary-color;
+                        border-left: 0;
+                        border-right: 0;
+                        transition: width 0.5s ease-in-out;
+                        pointer-events: none;
+                    }
+
+                    &:hover::before {
+                        width: 100%;
+                    }
+
+                    a {
+                        @include font;
+                        color: $tertiary-color;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+                }
+            
+            }
+        }
+
+        .mobile-fanfud-bar {
+            display: none;
+        }
+
+        .custom-menu {
+            display: none;
+        }
+    }
+}

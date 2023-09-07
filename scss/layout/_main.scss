@@ -1,0 +1,854 @@
+@import "../utils/variables";
+@import "../utils/mixin";
+@import "../utils/globals";
+@import "../utils/extend";
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+        height: 100%;
+    }
+
+    body {
+        @include font;
+        background-image: url(../media/fanfud/background.png);
+        height: 10%;
+        min-height: 100%;
+    }
+
+
+    /* ⇩ INDEX STYLES ⇩⇩ INDEX STYLES ⇩⇩ INDEX STYLES ⇩⇩ INDEX STYLES ⇩ */
+
+    main {
+        .index-container {
+            @include flex;
+            flex-direction: column;
+            margin: 0;
+            @include desktop {
+                flex-direction: row;
+            }
+            .custom-carousel {
+                margin: 2%;
+                border: 3px solid $tertiary-color;
+                margin-bottom: 5%;
+                @include desktop {
+                    width: 60%;
+                    margin-top: 5%;
+                    margin-right: 1%;
+                }
+            }
+            .index-card {
+                @include font;
+                @include card(80%,auto);
+                margin: 5%;
+                @include desktop {
+                    width: 25%;
+                    margin: 0;
+                    margin-right: 1%;
+                }
+                h1 {
+                    margin-top: 5%;
+                    font-size: 4rem;
+                    font-weight: 300;
+                    @include tablet {
+                        font-size: 5rem;
+                    }
+                    @include desktop {
+                        margin-top: 0;
+                    }
+                }
+                p {
+                    font-size: 2rem;
+                    padding: 5%;
+                    @include tablet {
+                        font-size: 2.3rem;
+                        padding: 3%;
+                        padding-left: 5%;
+                        padding-right: 5%;
+                    }
+                    @include desktop {
+                        padding: 7%;
+                    }
+                }
+                img {
+                    width: 80%;
+                    height: auto;
+                    @include tablet {
+                        width: 70%;
+                        height: auto;
+                    }
+                    @include desktop {
+                        width: 85%;
+                        margin: 5%;
+                    }
+                }
+                .index-card-bottom-decoration {
+                    margin-top: 3%;
+                    @include tablet {
+                        margin-top: 5%;
+                    }
+                }
+                .index-reservation {
+                    font-size: 1.8rem;
+                    background: transparent;
+                    text-transform: initial;
+                    border-top: 2px solid #FFFFFA;
+                    border-bottom: 2px solid #FFFFFA;
+                    margin: 0rem 30% 1.5rem;
+                    padding: 8px;
+                    display: flex;
+                    align-content: center;
+                    justify-content: center;
+                    transition: background-color 0.5s, color 0.5s;
+                    text-decoration: none;
+                    color: #FFFFFA;
+                    @include tablet {
+                        font-size: 2.4rem;
+                    }
+                    &:hover {
+                        background-color: #FFFFFA;
+                        color: #44A1A0;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ⇧ INDEX STYLES ⇧⇧ INDEX STYLES ⇧⇧ INDEX STYLES ⇧⇧ INDEX STYLES ⇧ */
+
+
+    /* ⇩ MENU STYLES ⇩⇩ MENU STYLES ⇩⇩ MENU STYLES ⇩⇩ MENU STYLES ⇩ */
+
+    .menu-title {
+        @include flex;
+        @include font;
+        flex-direction: column;
+        color: $tertiary-color;
+        margin-top: 1rem;
+        @include desktop {
+            margin-top: 1%;
+        }
+        img {
+            width: 60%;
+            height: auto;
+            @include tablet {
+                width: 50%;
+            }
+        }
+        h1 {
+            padding-top: 2%;
+            font-size: 4rem;
+            font-weight: 300;
+            @include tablet {
+                font-size: 6rem;
+            }
+            @include desktop {
+                padding: 0;
+                margin: 0;
+                margin-top: 0.5%;
+                margin-bottom: 0.5%;
+            }
+        }
+    }
+    main {
+        .plates {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            padding: 20px;
+            @include desktop {
+                grid-template-columns: repeat(2, 1fr)
+            }
+            .starter {
+                @extend %plates;
+                @include desktop {
+                    margin: 1rem 22% 1rem;
+                }
+                h2 {
+                    @extend %titles;
+                    @include tablet {
+                        @include titles-tablet;
+                    }
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    li {
+                        h3 {
+                            font-size: 2rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                                margin-top: 5%;
+                            }
+                        }
+                        .menu-details {
+                            font-size: 1.8rem;
+                            font-weight: 300;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                        .menu-price {
+                            font-size: 1.8rem;
+                            padding-bottom: 1rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .main {
+                @extend %plates;
+                @include desktop {
+                    margin: 1rem 22% 1rem;
+                }
+                h2 {
+                    @extend %titles;
+                    @include tablet {
+                        @include titles-tablet;
+                    }
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    li {
+                        h3 {
+                            font-size: 2rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                                margin-top: 5%;
+                            }
+                        }
+                        .menu-details {
+                            font-size: 1.8rem;
+                            font-weight: 300;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                        .menu-price {
+                            font-size: 1.8rem;
+                            padding-bottom: 1rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .accompaniments {
+                @extend %plates;
+                @include desktop {
+                    margin: 1rem 22% 1rem;
+                }
+                h2 {
+                    @extend %titles;
+                    @include tablet {
+                        @include titles-tablet;
+                    }
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    li {
+                        h3 {
+                            font-size: 2rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                                margin-top: 5%;
+                            }
+                        }
+                        .menu-details {
+                            font-size: 1.8rem;
+                            font-weight: 300;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                        .menu-price {
+                            font-size: 1.8rem;
+                            padding-bottom: 1rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .dessert {
+                @extend %plates;
+                @include desktop {
+                    margin: 1rem 22% 1rem;
+                }
+                h2 {
+                    @extend %titles;
+                    @include tablet {
+                        @include titles-tablet;
+                    }
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    li {
+                        h3 {
+                            font-size: 2rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                                margin-top: 5%;
+                            }
+                        }
+                        .menu-details {
+                            font-size: 1.8rem;
+                            font-weight: 300;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                        .menu-price {
+                            font-size: 1.8rem;
+                            padding-bottom: 1rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .drinks {
+                @extend %plates;
+                @include desktop {
+                    margin: 1rem 22% 1rem;
+                    border-bottom: 2px solid $tertiary-color
+                }
+                h2 {
+                    @extend %titles;
+                    @include tablet {
+                        @include titles-tablet;
+                    }
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    li {
+                        h3 {
+                            font-size: 2rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                                margin-top: 5%;
+                            }
+                        }
+                        .menu-details {
+                            font-size: 1.8rem;
+                            font-weight: 300;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                        .menu-price {
+                            font-size: 1.8rem;
+                            padding-bottom: 1rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .wines {
+                @extend %plates;
+                @include desktop {
+                    margin: 1rem 22% 1rem;
+                    border-bottom: 2px solid $tertiary-color
+                }
+                h2 {
+                    @extend %titles;
+                    @include tablet {
+                        @include titles-tablet;
+                    }
+                }
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    li {
+                        h3 {
+                            font-size: 2rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                                margin-top: 5%;
+                            }
+                        }
+                        .menu-details {
+                            font-size: 1.8rem;
+                            font-weight: 300;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                        .menu-price {
+                            font-size: 1.8rem;
+                            padding-bottom: 1rem;
+                            @include tablet {
+                                font-size: 2.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ⇧ MENU STYLES ⇧⇧ MENU STYLES ⇧⇧ MENU STYLES ⇧⇧ MENU STYLES ⇧ */
+
+
+    /* ⇩ BRANCHES STYLES ⇩⇩ BRANCHES STYLES ⇩⇩ BRANCHES STYLES ⇩⇩ BRANCHES STYLES ⇩ */
+
+    main {
+        .branches-title {
+            @include font;
+            color: $tertiary-color;
+            text-align: center;
+            h1 {
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                font-size: 3rem;
+                font-weight: 300;
+                @include tablet {
+                    font-size: 4rem;
+                }
+            }
+            img {
+                width: 55%;
+                @include tablet {
+                    width: 45%;
+                }
+                @include desktop {
+                    width: 20%;
+                }
+            }
+            .branches-title-top-decoration {
+                margin-top: 1rem;
+            }
+            .branches-title-bottom-decoration {
+                margin-bottom: 1rem;
+            }
+        }
+        .branches {
+            @include font;
+            color: $tertiary-color;
+            text-align: center;
+            @include desktop {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                justify-content: center;
+                gap: 2%;
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-bottom: 5%;
+            }
+        }
+    }
+
+    .branches {
+        @include grid;
+        grid-template-columns: auto;
+        a {
+            text-decoration: none;
+            color: $tertiary-color;
+            .branch {
+                @include flex;
+                width: 30rem;
+                height: 15rem;
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                background-color: $secondary-color;
+                border: 3px solid $tertiary-color;
+                border-bottom: 10px solid $quarternary-color;
+                @include tablet {
+                    width: 40rem;
+                    height: 20rem;
+                }
+                @include desktop {
+                    width: 100%;
+                }
+                .branch-content {
+                    h2 {
+                        font-size: 3.7rem;
+                        font-weight: 300;
+                        margin-top: 2%;
+                        @include tablet {
+                            font-size: 4.5rem;
+                        }
+                    }
+                    h3 {
+                        font-size: 2.5rem;
+                        color: $quinary-color;
+                    }
+                    p {
+                        font-size: 2rem;
+                        font-weight: 300;
+                        @include tablet {
+                            font-size: 2.5rem
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ⇧ BRANCHES STYLES ⇧⇧ BRANCHES STYLES ⇧⇧ BRANCHES STYLES ⇧⇧ BRANCHES STYLES ⇧ */
+
+
+    /* ⇩ OUR HISTORY STYLES ⇩⇩ OUR HISTORY STYLES ⇩⇩ OUR HISTORY STYLES ⇩⇩ OUR HISTORY STYLES ⇩ */
+
+    .our-history-title-container {
+        @include flex;
+        margin: 2rem;
+        .our-history-title-card {
+            background-image: url(../media/our_history/minibulbs.png);
+            border: 3px solid $tertiary-color;
+            width: auto;
+            height: 15rem;
+            @include desktop {
+                width: 85%;
+            }
+            .our-history-title-body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                background: #0d5c6332;
+                color: #FFFFFA;
+                text-align: center;
+                font-family: 'Josefin Sans', sans-serif;
+                backdrop-filter: blur(4px);
+                h1 {
+                    font-size: 2.3rem;
+                    font-weight: 300;
+                    padding-left: 1%;
+                    padding-right: 1%;
+                    @include tablet {
+                        font-size: 3rem;
+                    }
+                    @include desktop {
+                        font-size: 5.5rem;
+                        margin-top: 10%;
+                        margin-bottom: 10%;
+                    }
+                }
+            }
+        }
+    }
+
+    /* ⇧ OUR HISTORY STYLES ⇧⇧ OUR HISTORY STYLES ⇧⇧ OUR HISTORY STYLES ⇧⇧ OUR HISTORY STYLES ⇧ */
+
+
+    /* ⇩ RESERVATION STYLES ⇩⇩ RESERVATION STYLES ⇩⇩ RESERVATION STYLES ⇩⇩ RESERVATION STYLES ⇩ */
+
+    .reservation-container {
+        @include flex;
+        margin: 4.5rem;
+
+        @include tablet {
+            margin: 7rem
+        }
+        .reservation-card {
+            @include font;
+            background-color: $secondary-color;
+            border: 3px solid $tertiary-color;
+            color: $tertiary-color;
+            width: 100%;
+            height: 100%;
+            @include desktop {
+                width: 40%;
+            }
+            .reservation-card-bottom-decoration {
+                width: 80%;
+                padding-bottom: 5%;
+            }
+            .reservation-card-top-decoration {
+                width: 80%;
+                padding-top: 5%;
+            } 
+            h1 {
+                font-size: 3.5rem;
+                font-weight: 300;
+                margin-top: 2rem;
+                margin-bottom: 1rem;
+                @include tablet {
+                    font-size: 4.5rem;
+                }
+            }
+            .reservation-form {
+                .button {
+                    width: 35% !important;
+                    margin-bottom: 2rem;
+                    font-size: 1.5rem;
+                    @include tablet {
+                        font-size: 2rem;
+                    }
+                }
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 1rem;
+                    align-items: center;
+                    justify-content: center;
+                    .options {
+                        @include flex;
+                        font-size: 2rem;
+                        font-weight: 300;
+                        @include tablet {
+                            font-size: 2.5rem;
+                        }
+                        span {
+                            padding-left: 1rem;
+                            padding-right: 1rem;
+                            @include tablet {
+                                padding-top: 1.5rem;
+                                padding-bottom: 1.5rem;
+                            }
+                        }
+                        input {
+                            align-items: center;
+                        }
+                    }
+                    .branch-selector {
+                        font-size: 2rem;
+                        padding: 0.2rem;
+                        text-align: center;
+                        margin: 1rem;
+                    }
+                    input {
+                        width: 65%;
+                        text-align: center;
+                        font-size: 1.6rem;
+                        @include tablet {
+                            font-size: 2rem;
+                        }
+                    }
+                    label {
+                        font-size: 1.8rem;
+                        font-weight: 300;
+                        @include tablet {
+                            font-size: 2.5rem;
+                        }                     
+                    }
+                }
+            }
+        }
+    }
+
+    /* ⇧ RESERVATION STYLES ⇧⇧ RESERVATION STYLES ⇧⇧ RESERVATION STYLES ⇧⇧ RESERVATION STYLES ⇧ */
+
+@media screen and (min-width: 300px) {
+
+    /* ⇩ OUR HISTORY STYLES ⇩⇩ OUR HISTORY STYLES ⇩⇩ OUR HISTORY STYLES ⇩⇩ OUR HISTORY STYLES ⇩ */
+
+    .our-history-img-container {
+        display: none;
+        @include desktop {
+            display: block;
+            width: 50%;
+            position: relative;
+        }
+        img {
+            padding: 0 !important;
+            @include desktop {
+                max-width: 100%;
+                height: auto;
+                border: 3px solid #FFFFFA;
+            }
+        }
+    }
+
+    .our-history-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, auto);
+        @include desktop {
+            grid-template-columns: 1fr;
+            align-items: center;
+        }
+        .sentence {
+            color: #FFFFFA;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 300;
+            margin: 2rem;
+            border: 3px solid #FFFFFA;
+            @include tablet {
+                    font-size: 2.5rem;
+            }
+            @include desktop {
+                display: flex;
+                align-items: center;
+                border: 0;
+            }
+            img {
+                width: 80%;
+                padding: 1rem;
+            }
+            .sentence1 {
+                background-image: url(../media/our_history/landscape.jpg);
+                @include desktop {
+                    background-image: none;
+                    width: 50%;
+                    margin-left: 1%;
+                    margin-right: 1%;
+                }
+                .sentence1-body {
+                    backdrop-filter: blur(3px);
+                    background-color: #106f7732;
+                    @include desktop {
+                        background-color: transparent;
+                        backdrop-filter: none;
+                    }
+                    p {
+                        padding: 1rem;
+                    }
+                    .our-history-top-decoration {
+                        @include desktop {
+                            width: 50%;
+                        }
+                    }
+                    .our-history-bottom-decoration {
+                        @include desktop {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+            .sentence2 {
+                background-image: url(../media/our_history/ministaff.png);
+                background-size: 100%;
+                @include desktop {
+                    background-image: none;
+                    width: 50%;
+                    margin-left: 1%;
+                    margin-right: 1%;
+                }
+                .sentence2-body {
+                    backdrop-filter: blur(4px);
+                    background-color: #098b9754;
+                    @include desktop {
+                        background-color: transparent;
+                        backdrop-filter: none;
+                    }
+                    p {
+                        padding: 1rem;
+                    }
+                    .our-history-top-decoration {
+                        @include desktop {
+                            width: 50%;
+                        }
+                    }
+                    .our-history-bottom-decoration {
+                        @include desktop {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+            .sentence3 {
+                background-image: url(../media/our_history/inside_pic_one.jpg);
+                @include desktop {
+                    background-image: none;
+                    width: 50%;
+                    margin-left: 1%;
+                    margin-right: 1%;
+                }
+                .sentence3-body {
+                    backdrop-filter: blur(3px);
+                    background-color: #106f7732;
+                    @include desktop {
+                        background-color: transparent;
+                        backdrop-filter: none;
+                    }
+                    p {
+                        padding: 1rem;
+                    }
+                    .our-history-top-decoration {
+                        @include desktop {
+                            width: 50%;
+                        }
+                    }
+                    .our-history-bottom-decoration {
+                        @include desktop {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+            .sentence4 {
+                background-image: url(../media/our_history/inside_pic_two.jpg);
+                @include desktop {
+                    background-image: none;
+                    width: 50%;
+                    margin-left: 1%;
+                    margin-right: 1%;
+                }
+                .sentence4-body {
+                    backdrop-filter: blur(3px);
+                    background-color: #106f7732;
+                    @include desktop {
+                        background-color: transparent;
+                        backdrop-filter: none;
+                    }
+                    p {
+                        padding: 1rem;
+                    }
+                    .our-history-top-decoration {
+                        @include desktop {
+                            width: 50%;
+                        }
+                    }
+                    .our-history-bottom-decoration {
+                        @include desktop {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+            .sentence5 {
+                background-image: url(../media/our_history/inside_pic_three.jpg);
+                @include desktop {
+                    background-image: none;
+                    width: 50%;
+                    margin-left: 1%;
+                    margin-right: 1%;
+                }
+                .sentence5-body {
+                    backdrop-filter: blur(3px);
+                    background-color: #106f7732;
+                    @include desktop {
+                        background-color: transparent;
+                        backdrop-filter: none;
+                    }
+                    p {
+                        padding: 1rem;
+                    }
+                    .our-history-top-decoration {
+                        @include desktop {
+                            width: 50%;
+                        }
+                    }
+                    .our-history-bottom-decoration {
+                        @include desktop {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* ⇧ OUR HISTORY STYLES ⇧⇧ OUR HISTORY STYLES ⇧⇧ OUR HISTORY STYLES ⇧⇧ OUR HISTORY STYLES ⇧ */
+}
+

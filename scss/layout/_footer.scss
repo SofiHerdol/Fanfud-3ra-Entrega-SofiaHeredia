@@ -1,0 +1,26 @@
+@import "../utils/variables";
+@import "../utils/mixin";
+
+@media screen and (min-width: 100px) {
+    
+}
+.footer-copyright {
+    @include flex;
+    @include font;
+    background-color: $primary-color;
+    color: $tertiary-color;
+    width: 100%;
+    padding-top: 2%;
+    font-size: 1.5rem;
+    margin-top: auto;
+    border-top: 3px solid $tertiary-color;
+}
+
+@media screen and (min-width:1200px) {
+    .footer-copyright {
+        padding-top: 1%;
+        font-size: 2rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
