@@ -517,15 +517,12 @@
                 width: 85%;
             }
             .our-history-title-body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex;
+                @include font;
                 width: 100%;
                 height: 100%;
                 background: #0d5c6332;
-                color: #FFFFFA;
-                text-align: center;
-                font-family: 'Josefin Sans', sans-serif;
+                color: $tertiary-color;
                 backdrop-filter: blur(4px);
                 h1 {
                     font-size: 3rem;
@@ -596,11 +593,9 @@
                     }
                 }
                 .form-group {
-                    display: flex;
+                    @include flex;
                     flex-direction: column;
                     margin-bottom: 1rem;
-                    align-items: center;
-                    justify-content: center;
                     .options {
                         @include flex;
                         font-size: 2rem;
@@ -664,7 +659,7 @@
             @include desktop {
                 max-width: 100%;
                 height: auto;
-                border: 3px solid #FFFFFA;
+                border: 3px solid $tertiary-color;
             }
         }
     }
@@ -679,19 +674,18 @@
             align-items: center;
         }
         .sentence {
-            color: #FFFFFA;
-            font-family: 'Josefin Sans', sans-serif;
+            @include font;
+            color: $tertiary-color;
             font-size: 2rem;
             text-align: center;
             font-weight: 300;
             margin: 2rem;
-            border: 3px solid #FFFFFA;
+            border: 3px solid $tertiary-color;
             @include tablet {
                     font-size: 2.5rem;
             }
             @include desktop {
-                display: flex;
-                align-items: center;
+                @include flex;
                 border: 0;
             }
             img {
