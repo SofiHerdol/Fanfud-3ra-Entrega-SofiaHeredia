@@ -51,6 +51,17 @@
         text-align: center;
         font-size: 3rem;
         font-weight: 300;
+        transition: transform 0.7s;
+        li {
+            transition: transform 0.5s;
+            font-size: 3.5rem;
+            @include tablet {
+                font-size: 4.5rem;
+            }
+            &:hover {
+                transform: scale(0.85)
+            }
+        }
     }
 
     .dropdown-top-img, .dropdown-bottom-img {
@@ -97,6 +108,10 @@
 
                 img {
                     width: 30%;
+                    transition: transform 0.7s;
+                    &:hover {
+                        transform: scale(0.8)
+                    }
                 }
 
                 .fanfud-icon-link {

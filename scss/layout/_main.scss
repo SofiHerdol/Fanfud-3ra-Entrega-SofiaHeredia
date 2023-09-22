@@ -24,96 +24,95 @@
 
     /* ⇩ INDEX STYLES ⇩⇩ INDEX STYLES ⇩⇩ INDEX STYLES ⇩⇩ INDEX STYLES ⇩ */
 
-    main {
-        .index-container {
-            @include flex;
-            flex-direction: column;
-            margin: 0;
+
+    .index-container {
+        @include flex;
+        flex-direction: column;
+        margin: 0;
+        @include desktop {
+            flex-direction: row;
+        }
+        .custom-carousel {
+            margin: 2%;
+            border: 3px solid $tertiary-color;
+            margin-bottom: 5%;
             @include desktop {
-                flex-direction: row;
+                width: 60%;
+                margin-top: 5%;
+                margin-right: 1%;
             }
-            .custom-carousel {
-                margin: 2%;
-                border: 3px solid $tertiary-color;
-                margin-bottom: 5%;
+        }
+        .index-card {
+            @include font;
+            @include card(80%,auto);
+            margin: 5%;
+            @include desktop {
+                width: 25%;
+                margin: 0;
+                margin-right: 1%;
+            }
+            h1 {
+                margin-top: 5%;
+                font-size: 4rem;
+                font-weight: 300;
+                @include tablet {
+                    font-size: 5rem;
+                }
                 @include desktop {
-                    width: 60%;
-                    margin-top: 5%;
-                    margin-right: 1%;
+                    margin-top: 0;
                 }
             }
-            .index-card {
-                @include font;
-                @include card(80%,auto);
-                margin: 5%;
+            p {
+                font-size: 2rem;
+                padding: 5%;
+                @include tablet {
+                    font-size: 2.3rem;
+                    padding: 3%;
+                    padding-left: 5%;
+                    padding-right: 5%;
+                }
                 @include desktop {
-                    width: 25%;
-                    margin: 0;
-                    margin-right: 1%;
+                    padding: 7%;
                 }
-                h1 {
-                    margin-top: 5%;
-                    font-size: 4rem;
-                    font-weight: 300;
-                    @include tablet {
-                        font-size: 5rem;
-                    }
-                    @include desktop {
-                        margin-top: 0;
-                    }
-                }
-                p {
-                    font-size: 2rem;
-                    padding: 5%;
-                    @include tablet {
-                        font-size: 2.3rem;
-                        padding: 3%;
-                        padding-left: 5%;
-                        padding-right: 5%;
-                    }
-                    @include desktop {
-                        padding: 7%;
-                    }
-                }
-                img {
-                    width: 80%;
+            }
+            img {
+                width: 80%;
+                height: auto;
+                @include tablet {
+                    width: 70%;
                     height: auto;
-                    @include tablet {
-                        width: 70%;
-                        height: auto;
-                    }
-                    @include desktop {
-                        width: 85%;
-                        margin: 5%;
-                    }
                 }
-                .index-card-bottom-decoration {
-                    margin-top: 3%;
-                    @include tablet {
-                        margin-top: 5%;
-                    }
+                @include desktop {
+                    width: 85%;
+                    margin: 5%;
                 }
-                .index-reservation {
-                    font-size: 1.8rem;
-                    background: transparent;
-                    text-transform: initial;
-                    border-top: 2px solid #FFFFFA;
-                    border-bottom: 2px solid #FFFFFA;
-                    margin: 0rem 30% 1.5rem;
-                    padding: 8px;
-                    display: flex;
-                    align-content: center;
-                    justify-content: center;
-                    transition: background-color 0.5s, color 0.5s;
-                    text-decoration: none;
-                    color: #FFFFFA;
-                    @include tablet {
-                        font-size: 2.4rem;
-                    }
-                    &:hover {
-                        background-color: #FFFFFA;
-                        color: #44A1A0;
-                    }
+            }
+            .index-card-bottom-decoration {
+                margin-top: 3%;
+                @include tablet {
+                    margin-top: 5%;
+                }
+            }
+            .index-reservation {
+                font-size: 1.8rem;
+                background: transparent;
+                text-transform: initial;
+                border-top: 2px solid $tertiary-color;
+                border-bottom: 2px solid $tertiary-color;
+                margin: 0rem 30% 1.5rem;
+                padding: 8px;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                transition: background-color 0.5s, color 0.5s;
+                text-decoration: none;
+                color: $tertiary-color;
+                @include tablet {
+                    font-size: 2.4rem;
+                }
+                &:hover {
+                    background-color: $tertiary-color;
+                    color: $quarternary-color;
                 }
             }
         }
@@ -465,6 +464,7 @@
             }
             .branch {
                 @include flex;
+                flex-direction: column;
                 width: 30rem;
                 height: 15rem;
                 margin-top: 2rem;
@@ -479,25 +479,23 @@
                 @include desktop {
                     width: 100%;
                 }
-                .branch-content {
-                    h2 {
-                        font-size: 3.7rem;
-                        font-weight: 300;
-                        margin-top: 2%;
-                        @include tablet {
-                            font-size: 4.5rem;
-                        }
+                h2 {
+                    font-size: 3.7rem;
+                    font-weight: 300;
+                    margin-top: 2%;
+                    @include tablet {
+                        font-size: 4.5rem;
                     }
-                    h3 {
-                        font-size: 2.5rem;
-                        color: $quinary-color;
-                    }
-                    p {
-                        font-size: 2rem;
-                        font-weight: 300;
-                        @include tablet {
-                            font-size: 2.5rem
-                        }
+                }
+                h3 {
+                    font-size: 2.5rem;
+                    color: $quinary-color;
+                }
+                p {
+                    font-size: 2rem;
+                    font-weight: 300;
+                    @include tablet {
+                        font-size: 2.5rem
                     }
                 }
             }
@@ -592,6 +590,16 @@
                     width: 35% !important;
                     margin-bottom: 2rem;
                     font-size: 1.5rem;
+                    background-color: $secondary-color;
+                    color: $tertiary-color;
+                    border: 1px solid $tertiary-color;
+                    padding-top: 0.3rem;
+                    padding-bottom: 0.3rem;
+                    font-weight: 300;
+                    transition: transform 0.7s;
+                    &:hover {
+                        transform: scale(0.9)
+                    }
                     @include tablet {
                         font-size: 2rem;
                     }
@@ -624,14 +632,33 @@
                         padding: 0.2rem;
                         text-align: center;
                         margin: 1rem;
+                        background-color: $secondary-color;
+                        color: $tertiary-color;
+                        font-weight: 300;
+                        border: 1px solid $tertiary-color;
+                        padding-top: 0.4rem;
+                        padding-bottom: 0.4rem;
                     }
                     input {
                         width: 65%;
                         text-align: center;
                         font-size: 1.6rem;
+                        background-color: $secondary-color;
+                        border: 1px solid $tertiary-color;
+                        color: $tertiary-color;
+                        outline: none;
+                        font-weight: 300;
                         @include tablet {
                             font-size: 2rem;
                         }
+                    }
+                    input[type="time"]::-webkit-calendar-picker-indicator {
+                        background: none;
+                        display: none;
+                    }
+                    input[type="date"]::-webkit-calendar-picker-indicator {
+                        background: none;
+                        display: none;
                     }
                     label {
                         font-size: 1.8rem;

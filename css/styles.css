@@ -52,6 +52,21 @@ main .plates .wines h2, main .plates .drinks h2, main .plates .dessert h2, main 
     text-align: center;
     font-size: 3rem;
     font-weight: 300;
+    transition: transform 0.7s;
+  }
+  ul.custom-dropdown li {
+    transition: transform 0.5s;
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 100px) and (min-width: 700px) {
+  ul.custom-dropdown li {
+    font-size: 4.5rem;
+  }
+}
+@media screen and (min-width: 100px) {
+  ul.custom-dropdown li:hover {
+    transform: scale(0.85);
   }
   .dropdown-top-img, .dropdown-bottom-img {
     width: 80%;
@@ -94,6 +109,10 @@ main .plates .wines h2, main .plates .drinks h2, main .plates .dessert h2, main 
   }
   nav .desktop-header .fanfud-icon img {
     width: 30%;
+    transition: transform 0.7s;
+  }
+  nav .desktop-header .fanfud-icon img:hover {
+    transform: scale(0.8);
   }
   nav .desktop-header .fanfud-icon .fanfud-icon-link {
     display: flex;
@@ -183,7 +202,7 @@ body {
 }
 
 /* ⇩ INDEX STYLES ⇩⇩ INDEX STYLES ⇩⇩ INDEX STYLES ⇩⇩ INDEX STYLES ⇩ */
-main .index-container {
+.index-container {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -192,23 +211,23 @@ main .index-container {
   margin: 0;
 }
 @media screen and (min-width: 1200px) {
-  main .index-container {
+  .index-container {
     flex-direction: row;
   }
 }
-main .index-container .custom-carousel {
+.index-container .custom-carousel {
   margin: 2%;
   border: 3px solid #FFFFFA;
   margin-bottom: 5%;
 }
 @media screen and (min-width: 1200px) {
-  main .index-container .custom-carousel {
+  .index-container .custom-carousel {
     width: 60%;
     margin-top: 5%;
     margin-right: 1%;
   }
 }
-main .index-container .index-card {
+.index-container .index-card {
   font-family: "Josefin Sans", sans-serif;
   width: 80%;
   height: auto;
@@ -219,33 +238,33 @@ main .index-container .index-card {
   margin: 5%;
 }
 @media screen and (min-width: 1200px) {
-  main .index-container .index-card {
+  .index-container .index-card {
     width: 25%;
     margin: 0;
     margin-right: 1%;
   }
 }
-main .index-container .index-card h1 {
+.index-container .index-card h1 {
   margin-top: 5%;
   font-size: 4rem;
   font-weight: 300;
 }
 @media screen and (min-width: 700px) {
-  main .index-container .index-card h1 {
+  .index-container .index-card h1 {
     font-size: 5rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  main .index-container .index-card h1 {
+  .index-container .index-card h1 {
     margin-top: 0;
   }
 }
-main .index-container .index-card p {
+.index-container .index-card p {
   font-size: 2rem;
   padding: 5%;
 }
 @media screen and (min-width: 700px) {
-  main .index-container .index-card p {
+  .index-container .index-card p {
     font-size: 2.3rem;
     padding: 3%;
     padding-left: 5%;
@@ -253,35 +272,35 @@ main .index-container .index-card p {
   }
 }
 @media screen and (min-width: 1200px) {
-  main .index-container .index-card p {
+  .index-container .index-card p {
     padding: 7%;
   }
 }
-main .index-container .index-card img {
+.index-container .index-card img {
   width: 80%;
   height: auto;
 }
 @media screen and (min-width: 700px) {
-  main .index-container .index-card img {
+  .index-container .index-card img {
     width: 70%;
     height: auto;
   }
 }
 @media screen and (min-width: 1200px) {
-  main .index-container .index-card img {
+  .index-container .index-card img {
     width: 85%;
     margin: 5%;
   }
 }
-main .index-container .index-card .index-card-bottom-decoration {
+.index-container .index-card .index-card-bottom-decoration {
   margin-top: 3%;
 }
 @media screen and (min-width: 700px) {
-  main .index-container .index-card .index-card-bottom-decoration {
+  .index-container .index-card .index-card-bottom-decoration {
     margin-top: 5%;
   }
 }
-main .index-container .index-card .index-reservation {
+.index-container .index-card .index-reservation {
   font-size: 1.8rem;
   background: transparent;
   text-transform: initial;
@@ -297,11 +316,11 @@ main .index-container .index-card .index-reservation {
   color: #FFFFFA;
 }
 @media screen and (min-width: 700px) {
-  main .index-container .index-card .index-reservation {
+  .index-container .index-card .index-reservation {
     font-size: 2.4rem;
   }
 }
-main .index-container .index-card .index-reservation:hover {
+.index-container .index-card .index-reservation:hover {
   background-color: #FFFFFA;
   color: #44A1A0;
 }
@@ -696,6 +715,7 @@ main .branches {
   text-align: center;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 30rem;
   height: 15rem;
   margin-top: 2rem;
@@ -715,26 +735,26 @@ main .branches {
     width: 100%;
   }
 }
-.branches a .branch .branch-content h2 {
+.branches a .branch h2 {
   font-size: 3.7rem;
   font-weight: 300;
   margin-top: 2%;
 }
 @media screen and (min-width: 700px) {
-  .branches a .branch .branch-content h2 {
+  .branches a .branch h2 {
     font-size: 4.5rem;
   }
 }
-.branches a .branch .branch-content h3 {
+.branches a .branch h3 {
   font-size: 2.5rem;
   color: #78CDD7;
 }
-.branches a .branch .branch-content p {
+.branches a .branch p {
   font-size: 2rem;
   font-weight: 300;
 }
 @media screen and (min-width: 700px) {
-  .branches a .branch .branch-content p {
+  .branches a .branch p {
     font-size: 2.5rem;
   }
 }
@@ -842,6 +862,16 @@ main .branches {
   width: 35% !important;
   margin-bottom: 2rem;
   font-size: 1.5rem;
+  background-color: rgba(68, 161, 159, 0.5098039216);
+  color: #FFFFFA;
+  border: 1px solid #FFFFFA;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  font-weight: 300;
+  transition: transform 0.7s;
+}
+.reservation-container .reservation-card .reservation-form .button:hover {
+  transform: scale(0.9);
 }
 @media screen and (min-width: 700px) {
   .reservation-container .reservation-card .reservation-form .button {
@@ -887,16 +917,35 @@ main .branches {
   padding: 0.2rem;
   text-align: center;
   margin: 1rem;
+  background-color: rgba(68, 161, 159, 0.5098039216);
+  color: #FFFFFA;
+  font-weight: 300;
+  border: 1px solid #FFFFFA;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 .reservation-container .reservation-card .reservation-form .form-group input {
   width: 65%;
   text-align: center;
   font-size: 1.6rem;
+  background-color: rgba(68, 161, 159, 0.5098039216);
+  border: 1px solid #FFFFFA;
+  color: #FFFFFA;
+  outline: none;
+  font-weight: 300;
 }
 @media screen and (min-width: 700px) {
   .reservation-container .reservation-card .reservation-form .form-group input {
     font-size: 2rem;
   }
+}
+.reservation-container .reservation-card .reservation-form .form-group input[type=time]::-webkit-calendar-picker-indicator {
+  background: none;
+  display: none;
+}
+.reservation-container .reservation-card .reservation-form .form-group input[type=date]::-webkit-calendar-picker-indicator {
+  background: none;
+  display: none;
 }
 .reservation-container .reservation-card .reservation-form .form-group label {
   font-size: 1.8rem;
@@ -1259,7 +1308,7 @@ main .branches {
     width: 55%;
   }
 }
-.footer-copyright {
+footer {
   font-family: "Josefin Sans", sans-serif;
   display: flex;
   flex-direction: column;
@@ -1273,39 +1322,39 @@ main .branches {
   padding: 0;
   margin: 0;
 }
-.footer-copyright p {
+footer p {
   padding-top: 3%;
   text-align: center;
 }
-.footer-copyright .media-container {
+footer .media-container {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   border-top: 3px solid #FFFFFA;
 }
-.footer-copyright .media-container a {
+footer .media-container a {
   transition: transform 0.5s;
 }
-.footer-copyright .media-container a:hover {
+footer .media-container a:hover {
   transform: scale(0.8);
 }
-.footer-copyright .media-container a img {
+footer .media-container a img {
   width: 40%;
   margin-top: 10%;
   margin-bottom: 10%;
 }
 
 @media screen and (min-width: 700px) {
-  .footer-copyright p {
+  footer p {
     padding-top: 2%;
   }
-  .footer-copyright .media-container a {
+  footer .media-container a {
     max-width: 17%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer-copyright {
+  footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
@@ -1313,29 +1362,21 @@ main .branches {
     margin-bottom: 0;
     padding-bottom: 0;
   }
-  .footer-copyright p {
+  footer p {
     grid-column: 2;
   }
-  .footer-copyright .media-container {
+  footer .media-container {
     display: flex;
     grid-column: 3;
     border-top: 0;
   }
-  .footer-copyright .media-container a {
+  footer .media-container a {
     margin-left: 3%;
     max-width: 10%;
   }
-  .footer-copyright .media-container a img {
+  footer .media-container a img {
     width: 100%;
   }
-}
-.index-card {
-  width: 20rem;
-  height: 30rem;
-  color: #FFFFFA;
-  background-color: rgba(68, 161, 159, 0.5098039216);
-  border: 3px solid #FFFFFA;
-  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -6,7 +6,3 @@
 @import "./layout/main";
 @import "./layout/footer";
 @import "./components/boxes";
-
-.index-card {
-    @include card(20rem,30rem)
-}
